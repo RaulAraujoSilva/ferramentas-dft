@@ -377,25 +377,26 @@ dft nivelamento dados/nivelamento_fluxo.csv --destino-explorar "Análise documen
 
 - **Identificar.** As capacidades são:
 
-  | Etapa | Capacidade (casos/semana) |
-  |---|---|
-  | Protocolo | 93,33 |
-  | Análise documental | 42,00 |
-  | Análise técnica | **23,33** (ρ = 1,20) |
-  | Vistoria | 31,11 |
-  | Emissão | 35,00 |
+    | Etapa | Capacidade (casos/semana) |
+    |---|---|
+    | Protocolo | 93,33 |
+    | Análise documental | 42,00 |
+    | Análise técnica | **23,33** (ρ = 1,20) |
+    | Vistoria | 31,11 |
+    | Emissão | 35,00 |
 
-  A vazão é de 23,33 e acumulam-se 4,67 processos/semana (56 em 12 semanas).
+    A vazão é de 23,33 e acumulam-se 4,67 processos/semana (56 em 12 semanas).
+
 - **Explorar.** Kit completo: −15 % do tempo da análise técnica, transferido para a análise documental. A vazão sobe
-  para **27,45** (+4,12) sem servidor novo.
+    para **27,45** (+4,12) sem servidor novo.
 - **Subordinar.** Lead time a montante de 5 dias. O pulmão pela regra é de 2,5 dias (≈ 13,7 processos). O
-  estatístico é de 4,0 dias (≈ 22,1 processos; σ = 2,45 d, z = 1,645).
+    estatístico é de 4,0 dias (≈ 22,1 processos; σ = 2,45 d, z = 1,645).
 - **Elevar.**
-  - Sem explorar, +1 na análise técnica leva a vazão a 28 (ΔT − ΔOE = +R$ 1.000/semana com os parâmetros fictícios).
-  - Depois de explorar, o mesmo servidor rende +0,55 (ΔT − ΔOE = −R$ 2.705,88). A elevação mínima necessária é de
-    +0,06 servidor (≈ 1,7 h/semana).
-  - +1 em qualquer não-restrição: ΔT = 0, ΔOE = +R$ 3.200.
-  - Realocar um engenheiro da vistoria: vazão cai para 15,56 (nova restrição).
+    - Sem explorar, +1 na análise técnica leva a vazão a 28 (ΔT − ΔOE = +R$ 1.000/semana com os parâmetros fictícios).
+    - Depois de explorar, o mesmo servidor rende +0,55 (ΔT − ΔOE = −R$ 2.705,88). A elevação mínima necessária é de
+      +0,06 servidor (≈ 1,7 h/semana).
+    - +1 em qualquer não-restrição: ΔT = 0, ΔOE = +R$ 3.200.
+    - Realocar um engenheiro da vistoria: vazão cai para 15,56 (nova restrição).
 - **Dimensionar pela restrição** (ρ 0,95/0,85): 12 servidores necessários contra 11 atuais, com a análise técnica +1,
   a vistoria +1 e o protocolo −1.
 

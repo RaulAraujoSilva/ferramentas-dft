@@ -174,9 +174,9 @@ distribuições, e a triangular só para sensibilidade.
 1. **Montar o catálogo** (Fase 3), com uma linha por entrega. O volume anual vem da Fase 4: um número fixo ou três
    pontos. O tempo por execução vem da Fase 6: mínimo, mais provável e máximo. O mais provável é a **moda** (D1).
 2. **Escolher a distribuição** de cada tempo (D3):
-   - beta-PERT por padrão;
-   - log-normal deslocada se o gestor disser que "existe um caso, ainda que raro, que demoraria mais que o máximo";
-   - triangular só para sensibilidade.
+    - beta-PERT por padrão;
+    - log-normal deslocada se o gestor disser que "existe um caso, ainda que raro, que demoraria mais que o máximo";
+    - triangular só para sensibilidade.
 3. **Fixar N e a semente**: N = 10.000; a semente é registrada.
 4. **Decidir a correlação.** Use 0 como base e 0,3 a 0,6 como cenário, com justificativa (causa comum).
 5. **Rodar** e ler P50, P80 e P90 da carga total, o erro de Monte Carlo do P80 e a margem "soma dos P80 − P80 da

@@ -20,7 +20,7 @@ caso simples e 16 num caso enrolado. O artigo-base resolve a variabilidade lendo
   pontos (mínimo, mais provável, máximo), e convertida em distribuição: beta-PERT, triangular ou log-normal deslocada
   (MALCOLM et al., 1959; VOSE, 2000; RODRIGUES et al., 2021).
 
-Este dossiê descreve os dois caminhos, as decisões D1 e D3 do curso que os amarram, e o que o script faz em cada um.
+Este documento descreve os dois caminhos, as decisões D1 e D3 do curso que os amarram, e o que o script faz em cada um.
 
 ## 2. Padrões usuais e fontes
 

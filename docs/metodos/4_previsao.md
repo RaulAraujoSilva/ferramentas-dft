@@ -6,9 +6,9 @@
 > **Caso canônico:** CT-3 (dossiê L2, §6) — Holt vence SES (RMSE 6,20 < 7,41); Σ projeção de 12 meses = 2.481,05;
 > vetores +12% (h ≥ 4) e −5% (h ≥ 7); Σ ajustada = 2.637,19; o quadro passa de 24 para 25 servidores.
 
-Este dossiê **complementa** o L2 (§§1 e 2) e a pesquisa do Encontro 3 (`material/Encontro-03_Demanda_e_Esforco/01_pesquisa/`).
-Não repete o que lá está (M4, Gardner e McKenzie, Fildes et al., MASE, serviços de emergência). Acrescenta o padrão usual
-de cada técnica que o script implementa — Box-Jenkins, Croston/TSB, STL, origem móvel, bootstrap, hierarquia — e as
+Este documento **complementa** o L2 (§§1 e 2) e a apostila do Módulo 3, que já tratam das competições de previsão
+(M4), da suavização exponencial amortecida, dos ajustes por julgamento, do MASE e dos serviços de emergência. Aqui entra o
+padrão usual de cada técnica que o script implementa — Box-Jenkins, Croston/TSB, STL, origem móvel, bootstrap, hierarquia — e as
 decisões de implementação.
 
 ---

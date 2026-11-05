@@ -87,7 +87,7 @@
     "doi": "10.1016/j.infsof.2009.08.004",
     "url": "https://doi.org/10.1016/j.infsof.2009.08.004",
     "abnt": "MENDLING, Jan; REIJERS, Hajo A.; VAN DER AALST, Wil M. P. Seven process modeling guidelines (7PMG). Information and Software Technology, Amsterdam, v. 52, n. 2, p. 127-136, 2010. DOI: 10.1016/j.infsof.2009.08.004. Disponível em: https://doi.org/10.1016/j.infsof.2009.08.004. Acesso em: 5 nov. 2026.",
-    "achado_chave": "Sete diretrizes de qualidade de modelo (poucos elementos, um início e um fim, estrutura bem formada, evitar OR, rótulos verbo + objeto, decompor acima de 50 elementos). Já coberto na pesquisa do Encontro 2; aqui inspira validar_fluxo.",
+    "achado_chave": "Sete diretrizes de qualidade de modelo (poucos elementos, um início e um fim, estrutura bem formada, evitar OR, rótulos verbo + objeto, decompor acima de 50 elementos). Apresentado no Encontro 2 (Fase 3); aqui inspira validar_fluxo.",
     "verificado": "Verificado em 5 nov. 2026: DOI conferido no Crossref."
   },
   {
