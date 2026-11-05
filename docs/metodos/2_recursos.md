@@ -255,8 +255,6 @@ agentes.
 Custo (TDABC, custo anual fictício R$ 168 mil para o técnico e R$ 84 mil para o agente): taxas de R$ 181,00/h e
 R$ 67,87/h; vistoria R$ 723,98 por unidade; certidão R$ 29,19. A certidão (E2) tem 3.600 de 6.480 ocorrências
 (**56%** do volume) e 20% da carga — alto volume e baixa complexidade, candidata a estudo de automação.
-*Nota de conferência:* o L1 (Parte 3.6, Passo 9) registra "46% do volume"; o cálculo correto com os dados do próprio
-exemplo é 3.600/6.480 = 55,6%. A conclusão qualitativa não muda.
 
 ## 9. O que o script faz
 

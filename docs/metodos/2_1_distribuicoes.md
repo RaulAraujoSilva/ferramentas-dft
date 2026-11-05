@@ -311,8 +311,7 @@ os dois; adotar o ajustado quando a aderência for boa.
 como quantil superestima** o P80; e **ler como quantil um valor típico subestima** (no CT-1, 6 h nem é atingível como
 quantil 2/3 com esses extremos — a moda teria de ficar abaixo do mínimo). O sentido do erro depende de qual lado da
 ambiguidade ocorre; a regra prática de D1 — perguntar pelo valor típico e tratá-lo como moda — elimina as duas
-versões. Recomenda-se ao coordenador conferir a frase de D1 que associa "usar como moda uma resposta dada pensando em
-quantil" a subestimação: pelas contas, nesse sentido o efeito é de superestimação.
+versões.
 
 ## 8. Exemplo numérico (fictício)
 
