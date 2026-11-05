@@ -36,7 +36,8 @@ def mes_br(rotulo) -> str:
         return f"{MESES_BR[int(rotulo.month) - 1]}/{int(rotulo.year)}"
     t = str(rotulo).strip()
     partes = t.replace("/", "-").split("-")
-    if len(partes) >= 2 and partes[0].isdigit() and len(partes[0]) == 4 and partes[1].isdigit()             and 1 <= int(partes[1]) <= 12:
+    eh_data = len(partes) >= 2 and partes[0].isdigit() and len(partes[0]) == 4 and partes[1].isdigit()
+    if eh_data and 1 <= int(partes[1]) <= 12:
         return f"{MESES_BR[int(partes[1]) - 1]}/{partes[0]}"
     return t
 
