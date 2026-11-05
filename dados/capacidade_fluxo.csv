@@ -1,0 +1,13 @@
+origem;destino;probabilidade
+INICIO;A1;1
+A1;A2;1
+A2;A3;0,85
+A2;A7;0,15
+A3;A4;0,40
+A3;A5;0,45
+A3;A7;0,15
+A4;A5;1
+A5;A6;1
+A6;FIM;1
+A7;A2;0,80
+A7;FIM;0,20

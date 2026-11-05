@@ -1,0 +1,11 @@
+id;entrega;duracao;predecessoras;recurso;carga;inicio_min;fim_max
+A01;Planejamento e roteirização das inspeções;2;;Fiscal;2;1;
+A02;Notificação dos estabelecimentos;2;A01;Administrativo;2;;
+A03;Inspeções — região Centro;4;A01;Fiscal;3;;
+A04;Inspeções — região Norte;3;A01;Fiscal;2;;
+A05;Inspeções — região Sul;3;A02;Fiscal;2;;
+A06;Triagem documental dos pedidos de renovação;4;A02;Administrativo;1;;
+A07;Análise de defesas e recursos;3;A03,A04;Fiscal;1;;
+A08;Emissão de alvarás sanitários;3;A06;Administrativo;2;;
+A09;Palestra de orientação ao setor regulado;1;;Fiscal;1;5;8
+A10;Relatório final e atualização cadastral;2;A05,A07,A08;Administrativo;1;;

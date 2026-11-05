@@ -1,0 +1,8 @@
+id;atividade;perfil;tempo_min;pessoas;horas_disponiveis;demanda;wip
+A1;Protocolar e autuar pedido;Assistente administrativo;15;1;77,35;100;5
+A2;Triar documentação;Assistente administrativo;20;1;77,35;129;12
+A3;Analisar projeto técnico;Arquiteto/engenheiro;90;2;77,35;109;60
+A4;Realizar vistoria;Fiscal de obras;120;2;77,35;44;15
+A5;Emitir parecer e minuta do alvará;Arquiteto/engenheiro;30;1;77,35;93;8
+A6;Assinar e publicar alvará;Gerente;10;1;20;93;6
+A7;Comunicar exigência ao requerente;Assistente administrativo;25;1;77,35;36;10

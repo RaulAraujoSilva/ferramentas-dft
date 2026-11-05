@@ -1,0 +1,6 @@
+entrega;nome;demanda;unidade_medida
+E1;Processo de licenciamento de obra autuado e analisado;1200;processo
+E2;Certidão de numeração predial emitida;3600;certidão
+E3;Pedido de alvará de funcionamento simples analisado;900;pedido
+E4;Manifestação de ouvidoria respondida;480;manifestação
+E5;Vistoria de campo com relatório;300;vistoria

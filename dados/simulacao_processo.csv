@@ -1,0 +1,4 @@
+etapa;servidores;tempo_min;tempo_mp;tempo_max;distribuicao;prob_retrabalho;volta_para
+Triagem e protocolo;1;0,1;0,2;0,5;beta_pert;0;
+Análise técnica;2;0,5;0,8;2,5;lognormal_deslocada;0;
+Conferência e assinatura;1;0,1;0,15;0,4;beta_pert;0,15;Análise técnica

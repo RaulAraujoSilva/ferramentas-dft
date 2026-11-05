@@ -1,0 +1,22 @@
+entrega;atividade;perfil;tempo_h;frequencia;raci;privativa
+E1;Autuar e conferir a documentação;Agente administrativo;0,40;1;A/R;não
+E1;Triar e despachar ao técnico;Agente administrativo;0,25;1;A/R;não
+E1;Comunicar exigência ao requerente;Agente administrativo;0,205;0,4;A/R;não
+E1;Analisar o projeto;Técnico (arquiteto/engenheiro);0,90;1;A/R;sim
+E1;Diligência técnica;Técnico (arquiteto/engenheiro);0,792;0,25;A/R;sim
+E2;Conferir o cadastro imobiliário;Agente administrativo;0,20;1;A/R;não
+E2;Emitir e assinar a certidão;Agente administrativo;0,15;1;A/R;não
+E2;Atender dúvida do requerente;Agente administrativo;0,16;0,5;A/R;não
+E3;Receber e conferir o pedido;Agente administrativo;0,60;1;A/R;não
+E3;Lançar no sistema de alvarás;Agente administrativo;0,50;1;A/R;não
+E3;Notificar o requerente;Agente administrativo;0,40;1;A/R;não
+E3;Publicar o extrato no diário oficial;;0,10;1;A/R;não
+E3;Analisar o enquadramento da atividade;Técnico (arquiteto/engenheiro);0,70;1;A/R;não
+E3;Decidir sobre o alvará;Técnico (arquiteto/engenheiro);0,30;1;A/R;sim
+E3;Decidir sobre o alvará;Chefe de divisão;0,05;1;A/R;sim
+E4;Classificar a manifestação;Agente administrativo;0,20;1;A/R;não
+E4;Apurar junto ao setor responsável;Agente administrativo;0,70;1;A/R;não
+E4;Redigir a resposta;Agente administrativo;0,30;1;A/R;não
+E5;Deslocar-se e vistoriar;Fiscal de obras;2,50;1;A/R;sim
+E5;Redigir o relatório de vistoria;Técnico (arquiteto/engenheiro);1,20;1;A/R;sim
+E5;Revisar relatório devolvido;Técnico (arquiteto/engenheiro);0,60;0,5;A/R;sim

@@ -1,0 +1,7 @@
+entrega;volume_min;volume_mp;volume_max;tempo_min;tempo_mp;tempo_max;distribuicao
+Parecer técnico de licitação;2400;2637,1918;2900;4;6;16;beta_pert
+Certidão simples;3300;3600;3900;1;1,1;1,6;beta_pert
+Análise de recurso administrativo;160;200;260;6;10;30;lognormal_deslocada
+Vistoria de obra;300;350;420;3;4;9;beta_pert
+Atendimento ao cidadão (balcão);5500;6000;6800;0,2;0,3;0,8;beta_pert
+Reunião semanal de equipe (indireta, D2);52;52;52;1;1;1,5;beta_pert

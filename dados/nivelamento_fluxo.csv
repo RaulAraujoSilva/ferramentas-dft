@@ -1,0 +1,6 @@
+ordem;etapa;grupo;servidores;tempo_h;fracao;horas_servidor_semana;atravessamento_dias;cv_atravessamento;demanda
+1;Protocolo e autuação;administrativo;2;0,6;1;28;1;0,5;28
+2;Análise documental;administrativo;3;2,0;1;28;4;0,6;
+3;Análise técnica do projeto;engenharia;3;3,6;1;28;9;0,7;
+4;Vistoria in loco;engenharia;2;3,6;0,5;28;6;0,8;
+5;Emissão do alvará;administrativo;1;0,8;1;28;2;0,4;
