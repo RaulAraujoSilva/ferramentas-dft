@@ -35,7 +35,7 @@ from typing import Iterable, Mapping, Sequence
 import numpy as np
 import pandas as pd
 
-from ._comum import PALETA, br, estilo_graficos, ler_csv
+from ._comum import PALETA, br, estilo_graficos, formatar_eixos_br, ler_csv
 
 __all__ = [
     # Parte A
@@ -653,6 +653,7 @@ def grafico_perfis(perfis: Mapping[str, pd.DataFrame], capacidades: Mapping[str,
                 ax.set_xlabel("semana")
     fig.suptitle("Histograma de recursos: cronograma mais cedo × suavizado × nivelado", fontsize=12)
     fig.tight_layout()
+    formatar_eixos_br(fig)
     fig.savefig(caminho)
     plt.close(fig)
     return caminho
@@ -686,6 +687,7 @@ def grafico_toc(cenarios: Mapping[str, Sequence[Etapa]], horas_por_servidor: flo
     ax.set_title("TOC — capacidade por etapa (hachura = restrição de cada cenário)")
     ax.legend(fontsize=8, frameon=False, loc="upper right")
     fig.tight_layout()
+    formatar_eixos_br(fig)
     fig.savefig(caminho)
     plt.close(fig)
     return caminho

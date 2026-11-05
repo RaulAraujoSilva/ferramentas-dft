@@ -28,7 +28,7 @@ from typing import Callable, Iterable, Sequence
 import numpy as np
 from scipy import optimize, stats
 
-from ._comum import PALETA, SERIES, br, estilo_graficos, ler_csv, rng
+from ._comum import PALETA, SERIES, br, estilo_graficos, formatar_eixos_br, ler_csv, rng
 
 __all__ = [
     "ErroAjuste", "estatisticas_descritivas", "tamanho_amostra_media", "ciclos_cronoanalise_oit",
@@ -865,6 +865,7 @@ def grafico_ajuste(x: Sequence[float], ajustes: Sequence[Ajuste], caminho: str, 
     ax[2].set(title="Gráfico P-P (probabilidades)", xlabel="probabilidade empírica", ylabel="FDA ajustada")
     ax[1].legend(fontsize=8, frameon=False)
     fig.suptitle(titulo, color=PALETA["marinho"])
+    formatar_eixos_br(fig)
     fig.savefig(caminho)
     plt.close(fig)
     return caminho
@@ -895,6 +896,7 @@ def grafico_tres_pontos(a: float, m: float, b: float, caminho: str, p_cauda: flo
     ax.set(xlabel="horas por entrega", ylabel="densidade",
            title=titulo or f"Três pontos ({br(a)}; {br(m)}; {br(b)}) — mesma entrada, duas hipóteses")
     ax.legend(frameon=False, fontsize=9)
+    formatar_eixos_br(fig)
     fig.savefig(caminho)
     plt.close(fig)
     return caminho

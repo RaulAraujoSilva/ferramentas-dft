@@ -28,7 +28,7 @@ from collections.abc import Iterable, Mapping, Sequence
 import numpy as np
 import pandas as pd
 
-from ._comum import PALETA, br, estilo_graficos, ler_csv
+from ._comum import PALETA, br, estilo_graficos, formatar_eixos_br, ler_csv
 
 INICIO = "INICIO"
 FIM = "FIM"
@@ -548,6 +548,7 @@ def grafico_capacidade(tab: pd.DataFrame, caminho, titulo: str = "Capacidade × 
     ax2.set_xlabel("utilização (%)")
     ax2.set_xlim(0, max(115, 100 * float(tab["utilizacao"].max()) + 25))
     ax2.set_title("Utilização (tracejado = 85%; contínuo = 100%)", loc="left", fontsize=11)
+    formatar_eixos_br(fig)
     fig.savefig(caminho)
     plt.close(fig)
 
@@ -565,6 +566,7 @@ def grafico_curva_fila(caminho, ca2: float = 1.0, ce2: float = 1.0, servidores: 
     ax.set_ylabel("espera em fila ÷ tempo de serviço")
     ax.set_title("Quanto mais perto de 100%, mais a fila explode", loc="left", fontsize=12)
     ax.legend(frameon=False)
+    formatar_eixos_br(fig)
     fig.savefig(caminho)
     plt.close(fig)
 

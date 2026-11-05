@@ -47,7 +47,7 @@ from dataclasses import dataclass
 import numpy as np
 import pandas as pd
 
-from ._comum import PALETA, SERIES, br, estilo_graficos, ler_csv
+from ._comum import PALETA, SERIES, br, estilo_graficos, formatar_eixos_br, ler_csv
 
 REGRAS_ARREDONDAMENTO = ("teto", "comum", "piso_com_residuo")
 SEM_PERFIL = "(sem perfil)"
@@ -552,7 +552,7 @@ def grafico(res: dict, caminho: str) -> str:
     a1.invert_yaxis()
     a1.set_xlabel("horas por ano")
     a1.set_title("Carga por entrega, por perfil")
-    a1.legend(frameon=False, fontsize=9, loc="lower right")
+    a1.legend(frameon=False, fontsize=9, loc="upper center", bbox_to_anchor=(0.5, -0.16), ncol=2)
     y = np.arange(len(carga))
     a2.barh(y - 0.2, carga["carga_h"], height=0.4, color=PALETA["azul"], label="carga (h/ano)")
     if carga["capacidade_h"].notna().any():
@@ -562,9 +562,10 @@ def grafico(res: dict, caminho: str) -> str:
     a2.invert_yaxis()
     a2.set_xlabel("horas por ano")
     a2.set_title("Carga × capacidade por perfil")
-    a2.legend(frameon=False, fontsize=9)
+    a2.legend(frameon=False, fontsize=9, loc="upper center", bbox_to_anchor=(0.5, -0.16), ncol=2)
     fig.tight_layout()
     os.makedirs(os.path.dirname(os.path.abspath(caminho)), exist_ok=True)
+    formatar_eixos_br(fig)
     fig.savefig(caminho)
     plt.close(fig)
     return caminho

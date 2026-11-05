@@ -34,7 +34,7 @@ from typing import Callable, Sequence
 import numpy as np
 import pandas as pd
 
-from ._comum import PALETA, br, estilo_graficos, ler_csv, rng
+from ._comum import PALETA, br, estilo_graficos, formatar_eixos_br, ler_csv, mes_br, meses_seguintes, rng
 
 # ----------------------------------------------------------------------------------------------------------------
 # Constantes do método
@@ -987,21 +987,44 @@ def grafico(y: Sequence[float], projecao: dict, caminho: str, vetores: Sequence[
     if ajuste is not None:
         ax.plot(np.r_[n, xf], np.r_[a[-1], ajuste["ajustada"]], color=PALETA["verde_escuro"], lw=2.4,
                 label="Projeção ajustada (vetores)")
-        for v in vetores:
+    # folga no topo para as etiquetas dos vetores (horizontais, escalonadas: não se sobrepõem às curvas)
+    nv = len(vetores) if ajuste is not None else 0
+    etiquetas = []
+    y0, y1 = ax.get_ylim()
+    if nv:
+        ax.set_ylim(y0, y0 + (y1 - y0) / max(0.55, 0.86 - 0.075 * nv))
+        import matplotlib.transforms as mtransforms
+        mistura = mtransforms.blended_transform_factory(ax.transData, ax.transAxes)
+        for k, v in enumerate(vetores):
             fim = n + (v.fim if v.fim else h) + 0.5
             ax.axvspan(n + v.inicio - 0.5, fim, color=PALETA["verde"], alpha=0.07)
-            ax.annotate(f"{v.nome[:30]}… ×{br(v.fator, 2)}" if len(v.nome) > 30 else f"{v.nome} ×{br(v.fator, 2)}",
-                        xy=(n + v.inicio - 0.4, ax.get_ylim()[1]), fontsize=8, color=PALETA["verde_escuro"],
-                        va="top", rotation=90)
+            nome = v.nome if len(v.nome) <= 38 else v.nome[:38].rsplit(" ", 1)[0].rstrip(" ,;:") + "…"
+            etq = ax.text(n + v.inicio - 0.35, 0.975 - 0.075 * k, f"{v.id}: {nome} (×{br(v.fator, 2)})" if getattr(v, "id", "")
+                    else f"{nome} (×{br(v.fator, 2)})", transform=mistura, fontsize=8.5, va="top", ha="left",
+                    color=PALETA["verde_escuro"], clip_on=False,
+                    bbox={"facecolor": "white", "edgecolor": "none", "alpha": 0.8, "pad": 1})
+            etiquetas.append(etq)
     ax.axvline(n + 0.5, color=PALETA["linha"], lw=1)
+    ax.set_xlim(0.3, n + h + 0.7)
+    if etiquetas:  # etiqueta que passaria da borda direita é alinhada à direita, dentro do gráfico
+        rend = fig.canvas.get_renderer()
+        borda = ax.get_window_extent(rend).x1
+        for etq in etiquetas:
+            if etq.get_window_extent(rend).x1 > borda:
+                etq.set_x(n + h + 0.6)
+                etq.set_horizontalalignment("right")
     if rotulos is not None and len(rotulos) == n:
-        passo = max(1, (n + h) // 12)
-        ticks = list(range(1, n + 1, passo))
+        todos = [mes_br(r) for r in rotulos] + (meses_seguintes(rotulos[-1], h) or [""] * h)
+        passo = max(1, -(-(n + h) // 12))
+        ticks = list(range(1, n + h + 1, passo))
         ax.set_xticks(ticks)
-        ax.set_xticklabels([rotulos[i - 1] for i in ticks], rotation=45, ha="right", fontsize=8)
+        ax.set_xticklabels([todos[i - 1] for i in ticks], rotation=45, ha="right", fontsize=9)
+    else:
+        ax.set_xlabel("período")
     ax.set_title(titulo, loc="left", color=PALETA["marinho"])
     ax.set_ylabel(unidade)
     ax.legend(frameon=False, fontsize=9, loc="upper left")
+    formatar_eixos_br(fig)
     fig.savefig(caminho)
     plt.close(fig)
     return caminho

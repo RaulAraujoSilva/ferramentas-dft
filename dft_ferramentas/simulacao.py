@@ -36,7 +36,7 @@ from typing import Iterable, Sequence
 import numpy as np
 from scipy import stats
 
-from ._comum import PALETA, br, estilo_graficos, ler_csv, rng
+from ._comum import PALETA, br, estilo_graficos, formatar_eixos_br, ler_csv, rng
 
 N_PADRAO = 10_000
 DISPONIBILIDADE_CT3 = 1153.60      # h/servidor/ano — CT-3, passo 6 (L2, §6)
@@ -850,6 +850,7 @@ def grafico_esforco(res: ResultadoEsforco, caminho: str, disponibilidade: float 
     axt.tick_params(axis="x", labelrotation=30)
     axt.set_xlabel("carga total (h) — entrega no P10 (escuro) e no P90 (claro)", fontsize=9)
     axt.set_title("Tornado de sensibilidade", loc="left", color=PALETA["marinho"])
+    formatar_eixos_br(fig)
     fig.savefig(caminho)
     plt.close(fig)
     return caminho
@@ -882,6 +883,7 @@ def grafico_servidores(linhas: list[dict], caminho: str, prazo: float | None = N
     a2.set_xlabel("servidores")
     a2.set_xticks(cs)
     fig.suptitle("Quantos servidores mudam o nível de serviço", x=0.02, ha="left", color=PALETA["marinho"])
+    formatar_eixos_br(fig)
     fig.savefig(caminho)
     plt.close(fig)
     return caminho
